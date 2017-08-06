@@ -206,24 +206,33 @@
 				</executions>
 			</plugin>
 			 <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-site-plugin</artifactId>
-	  <version>3.3</version>
-      <configuration>
-        <reportPlugins>
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>findbugs-maven-plugin</artifactId>
-          </plugin>
-		  <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-pmd-plugin</artifactId>
-			</plugin>
-        </reportPlugins>
-		<outputDirectory>${pmdsite}\${project.artifactId}</outputDirectory>
-      </configuration>
-    </plugin>
-		</plugins>
+			      <groupId>org.apache.maven.plugins</groupId>
+			      <artifactId>maven-site-plugin</artifactId>
+				  <version>3.3</version>
+			      <configuration>
+					<reportPlugins>
+								  <plugin>
+								    <groupId>org.codehaus.mojo</groupId>
+								    <artifactId>findbugs-maven-plugin</artifactId>
+						  </plugin>
+						  <plugin>
+								<groupId>org.apache.maven.plugins</groupId>
+								<artifactId>maven-pmd-plugin</artifactId>
+							</plugin>
+					</reportPlugins>
+				<outputDirectory>${pmdsite}\${project.artifactId}</outputDirectory>
+			      </configuration>
+			    </plugin>
+			</plugins>
+		      <plugin>
+			<groupId>com.atlassian.maven.plugins</groupId>
+			<artifactId>clover-maven-plugin</artifactId>
+			<configuration>
+			  <licenseLocation>${clover.license.file}</licenseLocation>
+			  <generateHtml>true</generateHtml>
+			  <generateXml>true</generateXml>
+			</configuration>
+		      </plugin>
 
 
 	</build>
