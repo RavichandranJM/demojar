@@ -223,7 +223,6 @@
 				<outputDirectory>${pmdsite}\${project.artifactId}</outputDirectory>
 			      </configuration>
 			    </plugin>
-			</plugins>
 		      <plugin>
 			<groupId>com.atlassian.maven.plugins</groupId>
 			<artifactId>clover-maven-plugin</artifactId>
@@ -233,7 +232,7 @@
 			  <generateXml>true</generateXml>
 			</configuration>
 		      </plugin>
-
+		</plugins>
 
 	</build>
 	<reporting>
